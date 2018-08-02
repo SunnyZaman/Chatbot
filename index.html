@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Sunny's Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<link rel="icon" href="images/logo.png">
+    <link href="css/chatbot.css" rel="stylesheet">
+<script type="text/javascript" src="javascript/chatbot.js"></script>
+
+</head>
+
+<body>
+
+    
+
+    <div class="clickMe" id="clickMe">
+        <img src="images/img_avatar.png" id="avatar" alt="Avatar">
+        <button type="button" id="onlineStatus"><i class=""></i></button>
+    </div>
+    <div class="chatbox" id="thebutton">
+        <button id="x" type="button">
+            X
+        </button>
+
+ <div class="chatlogs" id="textarea_id">
+
+            
+            <!--<ul id="messages"></ul>-->
+        </div>
+
+        <div class="chat-form" id="chatform">
+            <input id="textbox" type="text">
+            <button id="button">Send</button>
+            <script type="text/javascript">
+               
+            </script>
+        </div>
+    </div>
+   
+
+</body>
+<script type="text/javascript">
+            document.getElementById("avatar").onclick = function() {
+                document.getElementById("thebutton").style.visibility = "visible";
+                document.getElementById("thebutton").style.opacity = "1";
+
+
+                /* document.getElementById("textbox").disabled = true; */
+                document.getElementById("clickMe").style.visibility = "hidden";
+                chatappStart();
+                return true;
+            }
+            document.getElementById("x").onclick = function() {
+                document.getElementById("thebutton").style.visibility = "hidden";
+                document.getElementById("clickMe").style.visibility = "visible";
+                document.getElementById("thebutton").style.opacity = "0";
+
+                document.getElementById("thebutton").style.transition = "visibility 0.3s linear,opacity 0.3s linear";
+                return true;
+            }
+        </script>
+</html>
